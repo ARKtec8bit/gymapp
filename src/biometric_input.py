@@ -1,0 +1,130 @@
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QLineEdit, QFormLayout, QLabel, QComboBox, QDoubleSpinBox, QPushButton, QMessageBox
+from datetime import datetime
+from src.data_storage import insert_data, get_usernames
+
+
+class BiometricInput(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.layout = QVBoxLayout()
+
+        self.form_layout = QFormLayout()
+
+        self.date_input = QLineEdit(datetime.now().strftime("%Y-%m-%d"))
+        self.user_input = QComboBox()
+        self.user_input.setEditable(True)
+        self.user_input.addItems(get_usernames())
+        self.weight_input = QDoubleSpinBox()
+        self.weight_input.setRange(0, 1000.00)
+        self.weight_input.setDecimals(2)
+        self.height_input = QDoubleSpinBox()
+        self.height_input.setRange(0, 1000.00)
+        self.height_input.setDecimals(2)
+        self.chest_input = QDoubleSpinBox()
+        self.chest_input.setRange(0, 1000.00)
+        self.chest_input.setDecimals(2)
+        self.hips_input = QDoubleSpinBox()
+        self.hips_input.setRange(0, 1000.00)
+        self.hips_input.setDecimals(2)
+        self.waist_input = QDoubleSpinBox()
+        self.waist_input.setRange(0, 1000.00)
+        self.waist_input.setDecimals(2)
+        self.shoulder_input = QDoubleSpinBox()
+        self.shoulder_input.setRange(0, 1000.00)
+        self.shoulder_input.setDecimals(2)
+        self.left_bicep_input = QDoubleSpinBox()
+        self.left_bicep_input.setRange(0, 1000.00)
+        self.left_bicep_input.setDecimals(2)
+        self.right_bicep_input = QDoubleSpinBox()
+        self.right_bicep_input.setRange(0, 1000.00)
+        self.right_bicep_input.setDecimals(2)
+        self.left_forearm_input = QDoubleSpinBox()
+        self.left_forearm_input.setRange(0, 1000.00)
+        self.left_forearm_input.setDecimals(2)
+        self.right_forearm_input = QDoubleSpinBox()
+        self.right_forearm_input.setRange(0, 1000.00)
+        self.right_forearm_input.setDecimals(2)
+        self.left_leg_input = QDoubleSpinBox()
+        self.left_leg_input.setRange(0, 1000.00)
+        self.left_leg_input.setDecimals(2)
+        self.right_leg_input = QDoubleSpinBox()
+        self.right_leg_input.setRange(0, 1000.00)
+        self.right_leg_input.setDecimals(2)
+        self.left_calf_input = QDoubleSpinBox()
+        self.left_calf_input.setRange(0, 1000.00)
+        self.left_calf_input.setDecimals(2)
+        self.right_calf_input = QDoubleSpinBox()
+        self.right_calf_input.setRange(0, 1000.00)
+        self.right_calf_input.setDecimals(2)
+
+        self.form_layout.addRow(QLabel("Date:"), self.date_input)
+        self.form_layout.addRow(QLabel("User:"), self.user_input)
+        self.form_layout.addRow(QLabel("Weight:"), self.weight_input)
+        self.form_layout.addRow(QLabel("Height:"), self.height_input)
+        self.form_layout.addRow(QLabel("Chest:"), self.chest_input)
+        self.form_layout.addRow(QLabel("Hips:"), self.hips_input)
+        self.form_layout.addRow(QLabel("Waist:"), self.waist_input)
+        self.form_layout.addRow(QLabel("Shoulder:"), self.shoulder_input)
+        self.form_layout.addRow(QLabel("Left Bicep:"), self.left_bicep_input)
+        self.form_layout.addRow(QLabel("Right Bicep:"), self.right_bicep_input)
+        self.form_layout.addRow(QLabel("Left Forearm:"),
+                                self.left_forearm_input)
+        self.form_layout.addRow(QLabel("Right Forearm:"),
+                                self.right_forearm_input)
+        self.form_layout.addRow(QLabel("Left Leg:"), self.left_leg_input)
+        self.form_layout.addRow(QLabel("Right Leg:"), self.right_leg_input)
+        self.form_layout.addRow(QLabel("Left Calf:"), self.left_calf_input)
+        self.form_layout.addRow(QLabel("Right Calf:"), self.right_calf_input)
+
+        self.submit_button = QPushButton("Submit")
+        self.submit_button.clicked.connect(self.submit_data)
+        self.layout.addLayout(self.form_layout)
+        self.layout.addWidget(self.submit_button)
+
+        self.setLayout(self.layout)
+
+    def submit_data(self):
+        try:
+            date = self.date_input.text()
+            user = self.user_input.currentText()
+            weight = self.weight_input.value()
+            height = self.height_input.value()
+            chest = self.chest_input.value()
+            hips = self.hips_input.value()
+            waist = self.waist_input.value()
+            shoulder = self.shoulder_input.value()
+            left_bicep = self.left_bicep_input.value()
+            right_bicep = self.right_bicep_input.value()
+            left_forearm = self.left_forearm_input.value()
+            right_forearm = self.right_forearm_input.value()
+            left_leg = self.left_leg_input.value()
+            right_leg = self.right_leg_input.value()
+            left_calf = self.left_calf_input.value()
+            right_calf = self.right_calf_input.value()
+
+            insert_data(date, user, weight, height, chest, hips, waist, shoulder, left_bicep,
+                        right_bicep, left_forearm, right_forearm, left_leg, right_leg, left_calf, right_calf)
+
+            self.clear_inputs()
+
+        except ValueError:
+            QMessageBox.critical(
+                self, "Input Error", "Please enter valid numerical values for the measurements.", QMessageBox.Ok)
+
+    def clear_inputs(self):
+        self.date_input.setText(datetime.now().strftime("%Y-%m-%d"))
+        self.user_input.setCurrentIndex(-1)
+        self.weight_input.setValue(0)
+        self.height_input.setValue(0)
+        self.chest_input.setValue(0)
+        self.hips_input.setValue(0)
+        self.waist_input.setValue(0)
+        self.shoulder_input.setValue(0)
+        self.left_bicep_input.setValue(0)
+        self.right_bicep_input.setValue(0)
+        self.left_forearm_input.setValue(0)
+        self.right_forearm_input.setValue(0)
+        self.left_leg_input.setValue(0)
+        self.right_leg_input.setValue(0)
+        self.left_calf_input.setValue(0)
+        self.right_calf_input.setValue(0)

@@ -7,6 +7,7 @@ from src.dracula_theme import apply_dracula_theme
 from src.workout_input_tab import WorkoutInputTab
 from src.timer_tab import BoxingTimer
 from src.random_full_body import WorkoutGeneratorApp
+from src.biometric_tab import BiometricTab
 
 
 class WorkoutApp(QMainWindow):
@@ -28,6 +29,7 @@ class WorkoutApp(QMainWindow):
                          "Boxing Timer")
         self.tabs.addTab(WorkoutGeneratorApp(),
                          "Random Full Body Workout")
+        self.tabs.addTab(BiometricTab(), "Biometric Data")
 
         # Add tabs to the main layout
         self.main_layout.addWidget(self.tabs)
