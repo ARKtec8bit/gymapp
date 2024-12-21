@@ -1,0 +1,88 @@
+{
+  "Upper Body": {
+    "Chest": [
+      "Bench Press",
+      "Incline Bench Press",
+      "Decline Bench Press",
+      "Chest Flyes",
+      "Cable Crossovers",
+      "Push-ups (using the bar for elevation)",
+      "Landmine Chest Press"
+    ],
+    "Shoulders": [
+      "Overhead Shoulder Press",
+      "Arnold Press",
+      "Lateral Raises",
+      "Front Raises",
+      "Upright Rows",
+      "Rear Delt Flyes",
+      "Landmine Press",
+      "Landmine Shoulder Press"
+    ],
+    "Back": [
+      "Bent Over Rows",
+      "T-Bar Rows (using the bar)",
+      "Lat Pulldowns",
+      "Pull-ups (using the bar for support)",
+      "Pullups",
+      "Negative Pullups",
+      "Cable Rows",
+      "Face Pulls",
+      "Shrugs",
+      "Landmine Row",
+      "Landmine Single-Arm Row"
+    ],
+    "Biceps": ["Bicep Curls", "Hammer Curls", "Preacher Curls"],
+    "Triceps": [
+      "Tricep Extensions",
+      "Skull Crushers",
+      "Tricep Dips (using the bar for support)"
+    ]
+  },
+  "Lower Body": {
+    "Quads": [
+      "Squats",
+      "Front Squats",
+      "Leg Press (if your machine allows it)",
+      "Landmine Squat",
+      "Landmine Split Squat"
+    ],
+    "Hamstrings": [
+      "Deadlifts",
+      "Romanian Deadlifts",
+      "Landmine Romanian Deadlift",
+      "Landmine Single-Leg Deadlift"
+    ],
+    "Glutes": [
+      "Lunges",
+      "Bulgarian Split Squats",
+      "Step-ups",
+      "Single-leg Deadlifts",
+      "Landmine Lunge"
+    ],
+    "Calves": ["Calf Raises", "Vertical Leg Press"]
+  },
+  "Core": {
+    "Abs": [
+      "Cable Crunches",
+      "Hanging Leg Raises",
+      "Woodchoppers",
+      "Pallof Press",
+      "Russian Twists (using cables)",
+      "Landmine Twists",
+      "Landmine Rainbow",
+      "Landmine Anti-Rotation",
+      "Landmine Windmill",
+      "Landmine Half-Kneeling Press"
+    ]
+  },
+  "Functional and Compound": [
+    "Smith Machine Squats",
+    "Smith Machine Bench Press",
+    "Smith Machine Shoulder Press",
+    "Smith Machine Bent Over Rows",
+    "Split Squats",
+    "Step-ups",
+    "Single-leg Deadlifts"
+  ]
+}

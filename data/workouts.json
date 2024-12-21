@@ -1,0 +1,141 @@
+{
+  "None": {},
+  "Workout A": {
+    "Week 1": {
+      "Monday": {
+        "Weights": [
+          { "exercise": "Squat", "sets": 3, "reps": 10, "weight": "80kg" },
+          { "exercise": "Bench Press", "sets": 3, "reps": 8, "weight": "60kg" }
+        ],
+        "Conditioning": [
+          { "exercise": "Burpees", "duration": "10 minutes", "reps": 100 }
+        ],
+        "Cardio": {
+          "exercise": "Running",
+          "distance": "5 km",
+          "duration": "30 minutes",
+          "hr_avg": 150,
+          "hr_max": 170
+        },
+        "Technical": {
+          "Kata": "Practiced Heian Shodan",
+          "Kihon": "Punches and Kicks",
+          "Renraku": "Combination Drills",
+          "Other": "Shadow Boxing"
+        }
+      },
+      "Wednesday": {
+        "Weights": [
+          { "exercise": "Deadlift", "sets": 4, "reps": 8, "weight": "100kg" },
+          {
+            "exercise": "Overhead Press",
+            "sets": 3,
+            "reps": 12,
+            "weight": "40kg"
+          }
+        ],
+        "Conditioning": [
+          {
+            "exercise": "Mountain Climbers",
+            "duration": "15 minutes",
+            "reps": 200
+          }
+        ],
+        "Cardio": {
+          "exercise": "Cycling",
+          "distance": "10 km",
+          "duration": "45 minutes",
+          "hr_avg": 140,
+          "hr_max": 160
+        },
+        "Technical": {
+          "Kata": "Practiced Heian Nidan",
+          "Kihon": "Blocks and Strikes",
+          "Renraku": "Defense Combinations",
+          "Other": "Footwork Drills"
+        }
+      }
+    },
+    "Week 2": {
+      "Monday": {
+        "Weights": [
+          { "exercise": "Squat", "sets": 3, "reps": 10, "weight": "85kg" },
+          { "exercise": "Bench Press", "sets": 3, "reps": 8, "weight": "65kg" }
+        ],
+        "Conditioning": [
+          { "exercise": "Burpees", "duration": "10 minutes", "reps": 100 }
+        ],
+        "Cardio": {
+          "exercise": "Running",
+          "distance": "5 km",
+          "duration": "30 minutes",
+          "hr_avg": 150,
+          "hr_max": 170
+        },
+        "Technical": {
+          "Kata": "Practiced Heian Shodan",
+          "Kihon": "Punches and Kicks",
+          "Renraku": "Combination Drills",
+          "Other": "Shadow Boxing"
+        }
+      }
+    }
+  },
+  "Workout B": {
+    "Week 1": {
+      "Tuesday": {
+        "Weights": [
+          { "exercise": "Deadlift", "sets": 4, "reps": 8, "weight": "100kg" },
+          {
+            "exercise": "Overhead Press",
+            "sets": 3,
+            "reps": 12,
+            "weight": "40kg"
+          }
+        ],
+        "Conditioning": [
+          {
+            "exercise": "Mountain Climbers",
+            "duration": "15 minutes",
+            "reps": 200
+          }
+        ],
+        "Cardio": {
+          "exercise": "Cycling",
+          "distance": "10 km",
+          "duration": "45 minutes",
+          "hr_avg": 140,
+          "hr_max": 160
+        },
+        "Technical": {
+          "Kata": "Practiced Heian Nidan",
+          "Kihon": "Blocks and Strikes",
+          "Renraku": "Defense Combinations",
+          "Other": "Footwork Drills"
+        }
+      },
+      "Thursday": {
+        "Weights": [
+          { "exercise": "Squat", "sets": 3, "reps": 10, "weight": "80kg" },
+          { "exercise": "Bench Press", "sets": 3, "reps": 8, "weight": "60kg" }
+        ],
+        "Conditioning": [
+          { "exercise": "Burpees", "duration": "10 minutes", "reps": 100 }
+        ],
+        "Cardio": {
+          "exercise": "Running",
+          "distance": "5 km",
+          "duration": "30 minutes",
+          "hr_avg": 150,
+          "hr_max": 170
+        },
+        "Technical": {
+          "Kata": "Practiced Heian Shodan",
+          "Kihon": "Punches and Kicks",
+          "Renraku": "Combination Drills",
+          "Other": "Shadow Boxing"
+        }
+      }
+    }
+  }
+}
